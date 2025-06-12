@@ -4,7 +4,7 @@ Welcome to the official **Northland ALX** brand kit. This repo contains our bran
 
 ---
 
-## 🏢 Company Identity
+ 🏢 Company Identity
 
 **Legal Name:** Northland Analytics & Logistics LLC  
 **Brand Name:** Northland ALX  
