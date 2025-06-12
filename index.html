@@ -16,10 +16,12 @@
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
-      height: 200px;
-      width: 200px;
+      max-width: 100%; /* Ensures the logo doesn't exceed container width */
+      height: auto; /* Maintains the aspect ratio */
+      width: 200px; /* Optional: Set a maximum width */
       margin: 0 auto;
     }
+}
     .pattern-bg {
       background-image: url('https://i.ibb.co/bR7y7PjJ/Northland.png'); /* Design pattern link */
       background-size: cover;
