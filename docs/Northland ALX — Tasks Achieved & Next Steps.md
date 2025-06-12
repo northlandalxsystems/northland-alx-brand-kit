@@ -1,5 +1,7 @@
 # Northland ALX — Tasks Achieved & Next Steps
 
+*Auto‐generated summary of completed deliverables and upcoming actions.*
+
 ---
 
 ## 📜 Tasks Achieved So Far
