@@ -1,17 +1,19 @@
-Northland ALX — Brand Kit & Product Roadmap
+# Northland ALX — Brand Kit & Product Roadmap
+
+![Northland ALX Logo](https://placeholder.com/logo.png) <!-- Add your logo URL here -->
 
 Welcome to the official **Northland ALX** brand kit. This repo contains our brand identity, digital strategy, and a clear roadmap of our product vision.
 
 ---
 
- 🏢 Company Identity
+## 🏢 Company Identity
 
-**Legal Name:** Northland Analytics & Logistics LLC  
-**Brand Name:** Northland ALX  
-**Tagline:** Smart. Connected. Reliable.  
-**Headquarters:** Accra, Ghana 🇬🇭  
-**Scope:** Pan‑African IT consultancy and SaaS company  
-**Mission:** To power Africa’s digital transformation through secure, scalable IT solutions in logistics, education, government, finance, and compliance.
+- **Legal Name:** Northland Analytics & Logistics LLC  
+- **Brand Name:** Northland ALX  
+- **Tagline:** Smart. Connected. Reliable.  
+- **Headquarters:** Accra, Ghana 🇬🇭  
+- **Scope:** Pan‑African IT consultancy and SaaS company  
+- **Mission:** To power Africa’s digital transformation through secure, scalable IT solutions in logistics, education, government, finance, and compliance.
 
 ---
 
@@ -43,9 +45,11 @@ Welcome to the official **Northland ALX** brand kit. This repo contains our bran
 |--------------|-----------------------------------------------------------------------|
 | Handle       | `@NorthlandALX`                                                      |
 | Display Name | Northland ALX                                                        |
-| Bio          | Africa’s trusted tech firm. We build reliable IT systems for logistics, compliance, education, and finance. Creators of GoldBod™, SmartSchools™, ZeroCap™, WarehouseX™, and EmailMTx™. |
+| Bio          | Africa’s trusted tech firm. We build reliable IT systems for logistics, compliance, education, and finance. Creators of GoldBod™, SmartSchools™, ZeroCap™, WarehouseX™, a[...] |
 | Location     | Accra, Ghana • Global 🌍                                              |
-| Website      | `https://northlandalx.com` *(placeholder or GitHub Pages)*           |
+| Website      | [northlandalx.com](https://northlandalx.com) *(placeholder or GitHub Pages)* |
+
+---
 
 ### 🧵 Pinned Tweet Template
 
@@ -61,3 +65,19 @@ We build:
 
 Made in Ghana • Built for Africa • Scaling globally 🌍  
 #AfroTech #GovTech #EduTech #AgriTech #FinTech #IoT
+```
+
+---
+
+## 🌐 Visit Us Online
+
+- **Website:** [northlandalx.com](https://northlandalx.com) *(or GitHub Pages link once published)*  
+- **Twitter:** [@NorthlandALX](https://twitter.com/NorthlandALX)  
+
+---
+
+## 📄 License
+
+This repository is licensed under the [MIT License](LICENSE).
+
+---
