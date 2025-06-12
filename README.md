@@ -6,7 +6,7 @@ Welcome to the official **Northland ALX** brand kit. This repo contains our bran
 
 ---
 
-## 🏢 Company Identity
+🏢 Company Identity
 
 - **Legal Name:** Northland Analytics & Logistics LLC  
 - **Brand Name:** Northland ALX  
@@ -17,7 +17,7 @@ Welcome to the official **Northland ALX** brand kit. This repo contains our bran
 
 ---
 
-## 🛠 What We Build & Do
+🛠 What We Build & Do
 
 1. **Gold Compliance IoT System**  
    Real-time IoT monitoring, blockchain logging, and smart audit tools for gold sourcing and export.
@@ -39,11 +39,11 @@ Welcome to the official **Northland ALX** brand kit. This repo contains our bran
 
 ---
 
-## 📘 Twitter Profile Configuration
+📘 Twitter Profile Configuration
 
 | Field        | Value                                                                 |
 |--------------|-----------------------------------------------------------------------|
-| Handle       | `@NorthlandALX`                                                      |
+| Handle       | @NorthlandALX                                                    |
 | Display Name | Northland ALX                                                        |
 | Bio          | Africa’s trusted tech firm. We build reliable IT systems for logistics, compliance, education, and finance. Creators of GoldBod™, SmartSchools™, ZeroCap™, WarehouseX™, a[...] |
 | Location     | Accra, Ghana • Global 🌍                                              |
@@ -51,9 +51,8 @@ Welcome to the official **Northland ALX** brand kit. This repo contains our bran
 
 ---
 
-### 🧵 Pinned Tweet Template
+🧵 Pinned Tweet Template
 
-```markdown
 🚀 Meet Northland ALX — Africa's emerging tech consultancy and SaaS provider.
 
 We build:
@@ -65,19 +64,14 @@ We build:
 
 Made in Ghana • Built for Africa • Scaling globally 🌍  
 #AfroTech #GovTech #EduTech #AgriTech #FinTech #IoT
-```
 
----
-
-## 🌐 Visit Us Online
+🌐 Visit Us Online
 
 - **Website:** [northlandalx.com](https://northlandalx.com) *(or GitHub Pages link once published)*  
 - **Twitter:** [@NorthlandALX](https://twitter.com/NorthlandALX)  
 
----
 
-## 📄 License
+📄 License
 
 This repository is licensed under the [MIT License](LICENSE).
 
----
