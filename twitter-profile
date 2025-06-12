@@ -1,0 +1,64 @@
+🧠 Weekly Content Strategy (Twitter/X)
+Day	Content Focus
+Mon	Deep dive: one flagship product (e.g. Gold IoT system)
+Tue	Tech feature: ML placement algorithm, IoT sensors
+Wed	Industry insight: schools, warehouses, compliance
+Thu	Team/partner spotlight or ecosystem news
+Fri	Screenshots & demos: dashboards or system prototypes
+Sat	Quote or thought leadership post from founders
+Sun	Vision thread: Africa's digital future
+
+🔗 Accounts to Follow (Twitter/X)
+African Tech & Startups
+@MESTAfrica
+
+@AfroTech
+
+@StartupGhana
+
+@TechGHOfficial
+
+@AnAfricanFuture
+
+Gov / Agri / Compliance / Finance Bodies
+@MinofEducationGH
+
+@AfCFTA
+
+@WorldBankAfrica
+
+@GhanaPostGPS
+
+Industry Influencers
+@EyramTawia
+
+@SimShagaya
+
+📁 Repository Structure (GitHub)
+cpp
+Copy
+Edit
+northland-alx-brand-kit/
+├── README.md
+├── logo/
+│   └── northland-logo.png
+├── banner/
+│   └── twitter-banner.png
+├── profile/
+│   └── twitter-bio.md
+├── threads/
+│   └── launch-thread.md
+├── homepage/
+│   └── index.html
+🧱 Brand Voice & Technical Values
+🔒 Trustworthy, secure, and reliable
+
+🌍 African-first, globally capable
+
+🧠 AI & ML-driven, data-first
+
+🛠 Systems-focused and product-managed
+
+📦 Scalable infrastructure via local data centers
+
+“Northland ALX — Smart. Connected. Reliable.”
