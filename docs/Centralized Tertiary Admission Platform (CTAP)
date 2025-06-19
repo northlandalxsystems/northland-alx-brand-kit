@@ -1,0 +1,192 @@
+ 📘 Centralized Tertiary Admission Platform (CTAP)
+
+Northland Analytics – Project 3  
+> A unified, government-backed admission management system integrating all Ghanaian tertiary institutions.
+
+ 🗂️ README
+ 📄 What is CTAP?
+
+The Centralized Tertiary Admission Platform (CTAP) is a national system developed to handle all undergraduate admission processes across public, private, and technical universities in Ghana. It guarantees a fair, efficient, and data-driven admission process, leveraging technology to match students based on merit, preferences, and institutional capacity.
+
+ 🧰 Features Summary
+
+- Fully automated student-to-university matching engine.
+- WAEC result verification via API integration with `waecgh.org`.
+- Unified student portal and university dashboards.
+- Integrated payment gateway (Paystack, Mobile Money).
+- Role-based access for government, universities, and applicants.
+- Real-time analytics and policy tracking for the Ministry of Education.
+
+ 🚀 Deployment & Tech Stack
+
+- Backend: NestJS (Node.js), PostgreSQL, TypeORM, Docker
+- Frontend: Next.js (React), Tailwind CSS
+- CI/CD: GitHub Actions → Azure Cloud
+- Security: JWT Authentication, RBAC, Encrypted WASSCE lookups
+
+ 📈 Why CTAP Matters
+
+- Stops duplication and manipulation of admissions.
+- Promotes equal access to tertiary education.
+- Enables government subsidy automation for less enrolled universities.
+- Fosters regional equity in education access.
+
+ 🧪 Dev Notes
+
+This project is under active development and currently in the integration testing phase with sample university partners.  
+A public pilot is planned for launch with 3 institutions in Q3 2025.
+
+ 📬 Contact
+
+For partnerships, technical support, or API access:  
+📧 hello@northlandanalytics.com  
+🌍 [https://northlandanalytics.com](https://northlandanalytics.com)
+
+ 📌 Project Overview
+
+The Centralized Tertiary Admission Platform (CTAP) is a nationwide admission matching and management system designed to integrate private, public, and technical universities across Ghana. CTAP provides a unified and optimized approach to student admissions, ensuring fair distribution, resource optimization, and universal access to tertiary education.
+
+ 🎯 Objectives
+
+- Ensure efficient, merit-based, and timely student placement.
+- Avoid underutilization of university resources.
+- Eliminate duplicate or conflicting admission offers.
+- Provide real-time tracking and analytics for government education bodies.
+- Serve as a mandatory admission gateway with government subsidy mechanisms.
+
+ 🏗 System Architecture
+ 🔧 Backend Stack
+
+- Node.js with NestJS
+- PostgreSQL with TypeORM
+- RESTful API and GraphQL
+- Authentication: JWT + Role-based access
+- WAEC Result Integration: Verified access to `waecgh.org`
+ 🌐 Frontend Stack
+
+- React with Next.js
+- Tailwind CSS for styling
+- Zustand / Redux Toolkit for state management
+- Axios or GraphQL Client
+ ☁️ Deployment
+
+- Hosted on Microsoft Azure
+- Dockerized using Docker + Docker Compose
+- CI/CD via GitHub Actions
+
+ 🔑 Core Features
+ 1. Admission Matching Algorithm
+- Based on first-come-first-serve and merit-based filtering.
+- Prioritizes student choices in order of preference.
+- Redistributes unmatched students automatically to qualified but less competitive institutions.
+ 2. University Panel
+- Can review, accept, or reject incoming applications.
+- Monitor application flow in real-time.
+- Manage departmental quotas and preferences.
+ 3. Government Admin Dashboard
+- View application trends across all institutions.
+- Manage compensation logic for under-enrolled schools.
+- Generate national reports for education policy planning.
+ 4. Payment Integration
+- Paystack & Mobile Money APIs for application fees.
+- Flexible logic to waive fees for scholarships or policy-based exceptions.
+ 5. WAEC Result Verification
+- API checks authenticity of student WASSCE results directly from WAEC Ghana (`waecgh.org`).
+- Eliminates fake result submissions.
+
+ 🔁 Flow of Operation
+
+1. Student signs up and inputs program choices + WAEC results.
+2. WAEC verification occurs via API.
+3. CTAP algorithm matches the student to top available option based on:
+   - Grades
+   - Available slots
+   - Program competitiveness
+4. If no match, system proposes alternatives.
+5. University receives and approves or redirects.
+6. Government monitors fill rates and redistributes where needed.
+
+ 🧠 Smart Distribution Logic
+ Principles
+- Fairness: No university is left underutilized.
+- Efficiency: High-performing students matched to top programs.
+- Inclusiveness: Regional, technical, and private universities included.
+ Parameters Considered
+- WAEC results
+- Student program priority
+- Time of application
+- Institutional quota
+- Demand/Supply balancing
+
+ 💡 ML and Data Insights
+
+- Predictive analytics on program demand trends.
+- University performance heatmaps.
+- Suggests new program creation areas.
+- Feedback loop trains placement models over time.
+
+ 🔐 User Roles
+
+| Role             | Capabilities                                                                 |
+|
+| Student          | Apply, track status, get match feedback                                      |
+| University Admin | Accept/reject applications, view dashboard, configure quotas                 |
+| Gov Admin        | Oversee all universities, control policy levers, process subsidies/metrics   |
+| Support Agent    | Help desk, technical support for institutions and applicants                 |
+
+ 🧾 API Modules (Backend)
+
+- `auth.module.ts`
+- `student.module.ts`
+- `university.module.ts`
+- `application.module.ts`
+- `payment.module.ts`
+- `waec-verification.module.ts`
+- `admin-insights.module.ts`
+- `matching-algorithm.service.ts`
+
+ 📦 Database Schema Overview
+ Tables
+
+- `users` (Student, Admin, University)
+- `applications`
+- `institutions`
+- `programs`
+- `results_verification`
+- `payments`
+- `placement_results`
+- `quotas` (by department & university)
+
+ 🧪 Testing Strategy
+
+- Jest + Supertest for Unit/Integration
+- E2E simulated application flows
+- WAEC API test mocks
+- PostgreSQL test containers
+
+ 🌍 Future Plans
+
+- Add SHS auto-pull integration from GES.
+- Enable SMS/USSD fallback for low-connectivity users.
+- Machine learning model for dropout prediction and reallocation.
+- Partnership API for international university offers.
+
+ 📄 License
+
+MIT License © 2025 Northland Analytics  
+All Rights Reserved.
+
+ 👥 Contributors
+
+- Kaide – Lead System Architect  
+- Northland Analytics Dev Team  
+- Ghana Education Policy Unit (Advisory Role)
+
+ ✅ Next Steps
+
+- [ ] Complete matching algorithm optimization.
+- [ ] Finalize WAEC API contract.
+- [ ] Test university onboarding.
+- [ ] Complete frontend dashboard wireframes.
+- [ ] Begin public pilot deployment with 3 universities.
+
