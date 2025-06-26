@@ -34,6 +34,68 @@
       background-color: #d4af37; /* Gold color */
       color: #121212; /* Dark text for buttons */
     }
+
+    /* Luxury Carousel Styles */
+    .luxury-carousel {
+      position: relative;
+      background: #181818;
+      border-radius: 1.5rem;
+      box-shadow: 0 4px 32px 0 rgba(191,160,70,0.08), 0 1.5px 8px 0 rgba(0,0,0,0.04);
+      padding: 2rem 0 2.5rem 0;
+      overflow: hidden;
+    }
+    .carousel-track {
+      display: flex;
+      transition: transform 0.7s cubic-bezier(.77,0,.18,1);
+      will-change: transform;
+    }
+    .carousel-item {
+      min-width: 100%;
+      flex-shrink: 0;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      color: #f5f5f5;
+      background: linear-gradient(120deg, #181818 80%, #232323 100%);
+      border-radius: 1rem;
+      box-shadow: 0 2px 12px 0 rgba(191,160,70,0.04);
+    }
+    .carousel-item h4 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: #bfa046;
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.02em;
+    }
+    .carousel-item p {
+      font-size: 1.05rem;
+      color: #e5e5e5;
+      opacity: 0.92;
+    }
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(191,160,70,0.12);
+      border: none;
+      color: #bfa046;
+      font-size: 2.2rem;
+      border-radius: 50%;
+      width: 2.5rem;
+      height: 2.5rem;
+      cursor: pointer;
+      z-index: 2;
+      transition: background 0.2s;
+    }
+    .carousel-btn:hover {
+      background: #bfa046;
+      color: #181818;
+    }
+    .carousel-btn.prev { left: 1rem; }
+    .carousel-btn.next { right: 1rem; }
+    @media (max-width: 600px) {
+      .carousel-item { padding: 1.2rem 0.5rem; }
+      .carousel-btn { font-size: 1.5rem; width: 2rem; height: 2rem; }
+    }
   </style>
 </head>
 <body class="font-sans">
@@ -70,23 +132,51 @@
     </div>
   </section>
 
-  <!-- Products Section -->
+  <!-- Luxury Carousel for Northland Services -->
   <section id="products" class="py-16">
-    <div class="max-w-6xl mx-auto px-4 text-center">
-      <h3 class="text-3xl font-bold mb-8">Our Solutions</h3>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="border p-6 rounded-lg shadow-sm bg-gray-700">
-          <h4 class="text-xl font-semibold mb-2">Gold Compliance IoT</h4>
-          <p>IoT sensors + blockchain for traceable, compliant gold sourcing.</p>
+    <div class="max-w-4xl mx-auto px-4">
+      <h3 class="text-3xl font-bold mb-8 text-center" style="color:#bfa046;letter-spacing:0.04em;">Our Solutions</h3>
+      <div class="carousel luxury-carousel">
+        <button class="carousel-btn prev" aria-label="Previous">&#10094;</button>
+        <div class="carousel-track">
+          <div class="carousel-item">
+            <h4>GoldBod Systems</h4>
+            <p>Digital gold traceability, IoT compliance, and stablecoin-backed monetization.</p>
+          </div>
+          <div class="carousel-item">
+            <h4>GIMTS</h4>
+            <p>Gold-Invest Monetization Transfer System for secure gold-backed transfers.</p>
+          </div>
+          <div class="carousel-item">
+            <h4>CTAP</h4>
+            <p>Centralized Tertiary Admission Platform for unified student applications.</p>
+          </div>
+          <div class="carousel-item">
+            <h4>Email‑to‑Email Transfers</h4>
+            <p>Decentralized protocol for secure peer-to-peer bank transfers.</p>
+          </div>
+          <div class="carousel-item">
+            <h4>North Warehousing</h4>
+            <p>Amazon-style warehouse matchmaking and logistics infrastructure.</p>
+          </div>
+          <div class="carousel-item">
+            <h4>Odoo Leather eCommerce</h4>
+            <p>Online store for handcrafted leather goods with payment/shipping integration.</p>
+          </div>
+          <div class="carousel-item">
+            <h4>IoT Compliance Module</h4>
+            <p>Middleware for verifying IoT device compliance in gold/agric tech.</p>
+          </div>
+          <div class="carousel-item">
+            <h4>School Fees Auto Reminder</h4>
+            <p>Automated notification platform for student fee reminders.</p>
+          </div>
+          <div class="carousel-item">
+            <h4>Agric/Cocoa Traceability</h4>
+            <p>End-to-end agricultural compliance using IoT and data dashboards.</p>
+          </div>
         </div>
-        <div class="border p-6 rounded-lg shadow-sm bg-gray-700">
-          <h4 class="text-xl font-semibold mb-2">Agri/Cocoa Traceability</h4>
-          <p>End-to-end agricultural compliance using IoT and data dashboards.</p>
-        </div>
-        <div class="border p-6 rounded-lg shadow-sm bg-gray-700">
-          <h4 class="text-xl font-semibold mb-2">Email‑to‑Email Transfers</h4>
-          <p>Decentralized protocol enabling secure peer-to-peer transfers.</p>
-        </div>
+        <button class="carousel-btn next" aria-label="Next">&#10095;</button>
       </div>
     </div>
   </section>
@@ -119,6 +209,28 @@
       <p>&copy; 2025 Northland ALX. All rights reserved.</p>
     </div>
   </footer>
+
+  <script>
+    (function() {
+      const track = document.querySelector('.carousel-track');
+      const items = Array.from(document.querySelectorAll('.carousel-item'));
+      const prevBtn = document.querySelector('.carousel-btn.prev');
+      const nextBtn = document.querySelector('.carousel-btn.next');
+      let idx = 0;
+      function update() {
+        track.style.transform = `translateX(-${idx * 100}%)`;
+      }
+      prevBtn.onclick = function() {
+        idx = (idx - 1 + items.length) % items.length;
+        update();
+      };
+      nextBtn.onclick = function() {
+        idx = (idx + 1) % items.length;
+        update();
+      };
+      setInterval(() => { nextBtn.click(); }, 7000);
+    })();
+  </script>
 
 </body>
 </html>
