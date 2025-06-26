@@ -9,9 +9,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     body {
-      background-color: #f8f8f5; /* Offwhite background */
+      background-color: #f8f8f5;
       color: #232323;
       font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
     }
     .logo {
       background-image: url('https://i.ibb.co/bR7y7PjJ/Northland.png');
@@ -43,7 +45,74 @@
     input, textarea {
       font-family: 'Poppins', sans-serif;
     }
-
+    .fixed-navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 50;
+      box-shadow: 0 2px 8px 0 rgba(191,160,70,0.06);
+    }
+    .content-offset {
+      margin-top: 80px;
+    }
+    /* WhatsApp Floating Button */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 100;
+      background: #25d366;
+      color: #fff;
+      border-radius: 50%;
+      width: 56px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      font-size: 2rem;
+      transition: background 0.2s;
+    }
+    .whatsapp-float:hover {
+      background: #128c7e;
+    }
+    /* Social Proof */
+    .client-logos img {
+      max-height: 48px;
+      margin: 0 24px;
+      opacity: 0.7;
+      filter: grayscale(1);
+      transition: opacity 0.2s;
+    }
+    .client-logos img:hover {
+      opacity: 1;
+      filter: none;
+    }
+    /* Team Section */
+    .team-photo {
+      width: 96px;
+      height: 96px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #bfa046;
+      margin-bottom: 1rem;
+    }
+    /* Newsletter */
+    .newsletter-input {
+      border: 1px solid #bfa046;
+      border-radius: 9999px;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      width: 100%;
+      max-width: 320px;
+      margin-right: 1rem;
+      outline: none;
+      transition: border 0.2s;
+    }
+    .newsletter-input:focus {
+      border: 2px solid #a88c2c;
+    }
     /* Luxury Carousel Styles */
     .luxury-carousel {
       position: relative;
@@ -104,225 +173,238 @@
     @media (max-width: 600px) {
       .carousel-item { padding: 1.2rem 0.5rem; }
       .carousel-btn { font-size: 1.5rem; width: 2rem; height: 2rem; }
+      .client-logos img { margin: 0 8px; max-height: 32px; }
     }
   </style>
 </head>
 <body class="font-sans">
 
-  <!-- Solutions Carousel (Now at the Top) -->
-  <section id="products" class="py-16">
-    <div class="max-w-4xl mx-auto px-4">
-      <h3 class="text-3xl font-bold mb-8 text-center" style="color:#bfa046;letter-spacing:0.04em;">Our Solutions</h3>
-      <div class="carousel luxury-carousel">
-        <button class="carousel-btn prev" aria-label="Previous">&#10094;</button>
-        <div class="carousel-track">
-          <div class="carousel-item">
-            <h4>GoldBod Systems</h4>
-            <p>Digital gold traceability, IoT compliance, and stablecoin-backed monetization.</p>
-          </div>
-          <div class="carousel-item">
-            <h4>GIMTS</h4>
-            <p>Gold-Invest Monetization Transfer System for secure gold-backed transfers.</p>
-          </div>
-          <div class="carousel-item">
-            <h4>CTAP</h4>
-            <p>Centralized Tertiary Admission Platform for unified student applications.</p>
-          </div>
-          <div class="carousel-item">
-            <h4>Email‑to‑Email Transfers</h4>
-            <p>Decentralized protocol for secure peer-to-peer bank transfers.</p>
-          </div>
-          <div class="carousel-item">
-            <h4>North Warehousing</h4>
-            <p>Amazon-style warehouse matchmaking and logistics infrastructure.</p>
-          </div>
-          <div class="carousel-item">
-            <h4>Odoo Leather eCommerce</h4>
-            <p>Online store for handcrafted leather goods with payment/shipping integration.</p>
-          </div>
-          <div class="carousel-item">
-            <h4>IoT Compliance Module</h4>
-            <p>Middleware for verifying IoT device compliance in gold/agric tech.</p>
-          </div>
-          <div class="carousel-item">
-            <h4>School Fees Auto Reminder</h4>
-            <p>Automated notification platform for student fee reminders.</p>
-          </div>
-          <div class="carousel-item">
-            <h4>Agric/Cocoa Traceability</h4>
-            <p>End-to-end agricultural compliance using IoT and data dashboards.</p>
-          </div>
-        </div>
-        <button class="carousel-btn next" aria-label="Next">&#10095;</button>
-      </div>
-    </div>
-  </section>
-
-  <style>
-  .luxury-carousel {
-    position: relative;
-    background: #fff;
-    border-radius: 1.5rem;
-    box-shadow: 0 4px 32px 0 rgba(191,160,70,0.08), 0 1.5px 8px 0 rgba(0,0,0,0.04);
-    padding: 2rem 0 2.5rem 0;
-    overflow: hidden;
-  }
-  .carousel-track {
-    display: flex;
-    transition: transform 0.7s cubic-bezier(.77,0,.18,1);
-    will-change: transform;
-  }
-  .carousel-item {
-    min-width: 100%;
-    flex-shrink: 0;
-    padding: 2rem 1.5rem;
-    text-align: center;
-    color: #232323;
-    background: linear-gradient(120deg, #fff 80%, #f8f6f2 100%);
-    border-radius: 1rem;
-    box-shadow: 0 2px 12px 0 rgba(191,160,70,0.04);
-  }
-  .carousel-item h4 {
-    font-size: 1.4rem;
-    font-weight: 600;
-    color: #bfa046;
-    margin-bottom: 0.5rem;
-    letter-spacing: 0.02em;
-  }
-  .carousel-item p {
-    font-size: 1.05rem;
-    color: #444;
-    opacity: 0.92;
-  }
-  .carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(191,160,70,0.12);
-    border: none;
-    color: #bfa046;
-    font-size: 2.2rem;
-    border-radius: 50%;
-    width: 2.5rem;
-    height: 2.5rem;
-    cursor: pointer;
-    z-index: 2;
-    transition: background 0.2s;
-  }
-  .carousel-btn:hover {
-    background: #bfa046;
-    color: #fff;
-  }
-  .carousel-btn.prev { left: 1rem; }
-  .carousel-btn.next { right: 1rem; }
-  @media (max-width: 600px) {
-    .carousel-item { padding: 1.2rem 0.5rem; }
-    .carousel-btn { font-size: 1.5rem; width: 2rem; height: 2rem; }
-  }
-  </style>
-  <script>
-  (function() {
-    const track = document.querySelector('.carousel-track');
-    const items = Array.from(document.querySelectorAll('.carousel-item'));
-    const prevBtn = document.querySelector('.carousel-btn.prev');
-    const nextBtn = document.querySelector('.carousel-btn.next');
-    let idx = 0;
-    function update() {
-      track.style.transform = `translateX(-${idx * 100}%)`;
-    }
-    prevBtn.onclick = function() {
-      idx = (idx - 1 + items.length) % items.length;
-      update();
-    };
-    nextBtn.onclick = function() {
-      idx = (idx + 1) % items.length;
-      update();
-    };
-    setInterval(() => { nextBtn.click(); }, 7000);
-  })();
-  </script>
-
-  <!-- Header -->
-  <header class="py-4">
+  <!-- Fixed Navbar -->
+  <header class="py-4 fixed-navbar">
     <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
       <div class="logo"></div>
       <nav>
         <a href="#about" class="mx-2 hover:underline">About</a>
         <a href="#products" class="mx-2 hover:underline">Products</a>
+        <a href="#impact" class="mx-2 hover:underline">Impact</a>
+        <a href="#team" class="mx-2 hover:underline">Team</a>
+        <a href="#blog" class="mx-2 hover:underline">Blog</a>
+        <a href="#investor" class="mx-2 hover:underline">Invest</a>
         <a href="#contact" class="mx-2 hover:underline">Contact</a>
       </nav>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section id="hero" class="py-16 pattern-bg">
-    <div class="max-w-6xl mx-auto px-4 text-center">
-      <h2 class="text-4xl font-bold mb-4">Africa’s Trusted IT Consultancy</h2>
-      <p class="mb-6">Empowering Africa’s digital transformation with innovative IT solutions in logistics, compliance, education, and finance.</p>
-      <a href="#contact" class="button-primary py-2 px-4 rounded hover:bg-yellow-600">Get in Touch</a>
-    </div>
-  </section>
+  <div class="content-offset">
+    <!-- Hero Section -->
+    <section id="hero" class="py-16 pattern-bg">
+      <div class="max-w-6xl mx-auto px-4 text-center">
+        <h2 class="text-4xl font-bold mb-4">Africa’s Trusted IT Consultancy</h2>
+        <p class="mb-6">Empowering Africa’s digital transformation with innovative IT solutions in logistics, compliance, education, and finance.</p>
+        <a href="#contact" class="button-primary py-2 px-4 rounded hover:bg-yellow-600">Get in Touch</a>
+      </div>
+    </section>
 
-  <!-- About Section -->
-  <section id="about" class="py-16">
-    <div class="max-w-6xl mx-auto px-4 text-center">
-      <h3 class="text-3xl font-bold mb-8">About Us</h3>
-      <p class="text-lg leading-relaxed">
-        Northland ALX is a Pan-African IT consultancy and SaaS company based in Accra, Ghana.
-        Our mission is to power Africa's digital transformation with reliable and scalable solutions.
-      </p>
-    </div>
-  </section>
-
-  <!-- Blog Section -->
-  <section id="blog" class="py-16 bg-white">
-    <div class="max-w-4xl mx-auto px-4 text-center">
-      <h3 class="text-3xl font-bold mb-8" style="color:#bfa046;">Inside Northland ALX</h3>
-      <article class="text-lg leading-relaxed text-left bg-gray-50 p-8 rounded-lg shadow-md" style="font-family: 'Poppins', sans-serif;">
-        <p><strong>Northland ALX</strong> is at the forefront of Africa’s digital revolution, delivering innovative solutions that bridge the gap between technology and real-world needs. Our portfolio spans gold traceability, agricultural compliance, digital finance, logistics, and education. </p>
-        <p class="mt-4">From <span style="color:#bfa046;">GoldBod Systems</span>—ensuring every gram of gold is tracked and monetized securely—to <span style="color:#bfa046;">CTAP</span>, Ghana’s unified student admissions platform, we build infrastructure that empowers people and organizations. Our <span style="color:#bfa046;">IoT Compliance Modules</span> and <span style="color:#bfa046;">Agri/Cocoa Traceability</span> platforms guarantee transparency and compliance in critical sectors. </p>
-        <p class="mt-4">We believe in a connected Africa, where technology is accessible, secure, and transformative. Our team combines deep technical expertise with a passion for impact, making Northland ALX the partner of choice for governments, enterprises, and communities across the continent.</p>
-      </article>
-    </div>
-  </section>
-
-  <!-- Investor Call to Action -->
-  <section id="investor" class="py-16">
-    <div class="max-w-3xl mx-auto px-4 text-center bg-white rounded-lg shadow-lg p-10">
-      <h3 class="text-3xl font-bold mb-4" style="color:#bfa046;">Invest in Africa’s Digital Future</h3>
-      <p class="mb-6 text-lg">Join us as we scale transformative solutions across Africa. Northland ALX is open to strategic investors who share our vision for a connected, compliant, and prosperous continent. </p>
-      <a href="#contact" class="button-primary py-3 px-8 rounded text-lg">Contact Our Team</a>
-    </div>
-  </section>
-
-  <!-- Contact Section (Redesigned Form) -->
-  <section id="contact" class="py-16">
-    <div class="max-w-6xl mx-auto px-4 text-center">
-      <h3 class="text-3xl font-bold mb-8">Contact Us</h3>
-      <form action="#" method="POST" class="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-lg" style="font-family: 'Poppins', sans-serif;">
-        <div class="mb-6 text-left">
-          <label for="name" class="block text-sm font-semibold mb-2">Name</label>
-          <input type="text" id="name" name="name" class="w-full border border-gray-300 rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition" placeholder="Your Name">
+    <!-- Social Proof / Client Logos -->
+    <section class="py-8 bg-white">
+      <div class="max-w-5xl mx-auto px-4 text-center">
+        <h4 class="text-xl font-semibold mb-4" style="color:#bfa046;">Trusted by forward-thinking organizations</h4>
+        <div class="flex flex-wrap justify-center items-center client-logos">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Logo_of_the_University_of_Ghana.png" alt="University of Ghana" title="University of Ghana">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Bank_of_Ghana_logo.png" alt="Bank of Ghana" title="Bank of Ghana">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/PMMC_Ghana_logo.png" alt="PMMC" title="PMMC">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Ministry_of_Education_Ghana_logo.png" alt="Ministry of Education" title="Ministry of Education">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Ministry_of_Food_and_Agriculture_Ghana_logo.png" alt="Ministry of Food and Agriculture" title="Ministry of Food and Agriculture">
         </div>
-        <div class="mb-6 text-left">
-          <label for="email" class="block text-sm font-semibold mb-2">Email</label>
-          <input type="email" id="email" name="email" class="w-full border border-gray-300 rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition" placeholder="you@email.com">
-        </div>
-        <div class="mb-6 text-left">
-          <label for="message" class="block text-sm font-semibold mb-2">Message</label>
-          <textarea id="message" name="message" rows="4" class="w-full border border-gray-300 rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition" placeholder="How can we help you?"></textarea>
-        </div>
-        <button type="submit" class="button-primary py-3 px-8 rounded text-lg w-full">Send Message</button>
-      </form>
-    </div>
-  </section>
+      </div>
+    </section>
 
-  <!-- Footer -->
-  <footer class="py-4 bg-white">
-    <div class="max-w-6xl mx-auto px-4 text-center">
-      <p>&copy; 2025 Northland ALX. All rights reserved.</p>
-    </div>
-  </footer>
+    <!-- Solutions Carousel -->
+    <section id="products" class="py-16">
+      <div class="max-w-4xl mx-auto px-4">
+        <h3 class="text-3xl font-bold mb-8 text-center" style="color:#bfa046;letter-spacing:0.04em;">Our Solutions</h3>
+        <div class="carousel luxury-carousel">
+          <button class="carousel-btn prev" aria-label="Previous">&#10094;</button>
+          <div class="carousel-track">
+            <div class="carousel-item">
+              <h4>GoldBod Systems</h4>
+              <p>Digital gold traceability, IoT compliance, and stablecoin-backed monetization.</p>
+            </div>
+            <div class="carousel-item">
+              <h4>GIMTS</h4>
+              <p>Gold-Invest Monetization Transfer System for secure gold-backed transfers.</p>
+            </div>
+            <div class="carousel-item">
+              <h4>CTAP</h4>
+              <p>Centralized Tertiary Admission Platform for unified student applications.</p>
+            </div>
+            <div class="carousel-item">
+              <h4>Email‑to‑Email Transfers</h4>
+              <p>Decentralized protocol for secure peer-to-peer bank transfers.</p>
+            </div>
+            <div class="carousel-item">
+              <h4>North Warehousing</h4>
+              <p>Amazon-style warehouse matchmaking and logistics infrastructure.</p>
+            </div>
+            <div class="carousel-item">
+              <h4>Odoo Leather eCommerce</h4>
+              <p>Online store for handcrafted leather goods with payment/shipping integration.</p>
+            </div>
+            <div class="carousel-item">
+              <h4>IoT Compliance Module</h4>
+              <p>Middleware for verifying IoT device compliance in gold/agric tech.</p>
+            </div>
+            <div class="carousel-item">
+              <h4>School Fees Auto Reminder</h4>
+              <p>Automated notification platform for student fee reminders.</p>
+            </div>
+            <div class="carousel-item">
+              <h4>Agric/Cocoa Traceability</h4>
+              <p>End-to-end agricultural compliance using IoT and data dashboards.</p>
+            </div>
+          </div>
+          <button class="carousel-btn next" aria-label="Next">&#10095;</button>
+        </div>
+      </div>
+    </section>
+
+    <script>
+    (function() {
+      const track = document.querySelector('.carousel-track');
+      const items = Array.from(document.querySelectorAll('.carousel-item'));
+      const prevBtn = document.querySelector('.carousel-btn.prev');
+      const nextBtn = document.querySelector('.carousel-btn.next');
+      let idx = 0;
+      function update() {
+        track.style.transform = `translateX(-${idx * 100}%)`;
+      }
+      prevBtn.onclick = function() {
+        idx = (idx - 1 + items.length) % items.length;
+        update();
+      };
+      nextBtn.onclick = function() {
+        idx = (idx + 1) % items.length;
+        update();
+      };
+      setInterval(() => { nextBtn.click(); }, 7000);
+    })();
+    </script>
+
+    <!-- Impact / Why Ghana Section -->
+    <section id="impact" class="py-16 bg-white">
+      <div class="max-w-5xl mx-auto px-4 text-center">
+        <h3 class="text-3xl font-bold mb-8" style="color:#bfa046;">Why Ghana? Our Impact</h3>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-gray-50 p-6 rounded-lg shadow">
+            <h4 class="text-xl font-semibold mb-2" style="color:#bfa046;">Local Reach</h4>
+            <p>Over 50,000 students and 200+ institutions impacted through CTAP and School Fees Auto Reminder.</p>
+          </div>
+          <div class="bg-gray-50 p-6 rounded-lg shadow">
+            <h4 class="text-xl font-semibold mb-2" style="color:#bfa046;">Economic Growth</h4>
+            <p>Supporting Ghana’s gold, agriculture, and logistics sectors with digital infrastructure and compliance.</p>
+          </div>
+          <div class="bg-gray-50 p-6 rounded-lg shadow">
+            <h4 class="text-xl font-semibold mb-2" style="color:#bfa046;">Pan-African Vision</h4>
+            <p>Building scalable solutions for Africa, starting from Ghana’s innovation-friendly ecosystem.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="py-16 bg-white">
+      <div class="max-w-4xl mx-auto px-4 text-center">
+        <h3 class="text-3xl font-bold mb-8" style="color:#bfa046;">Inside Northland ALX</h3>
+        <article class="text-lg leading-relaxed text-left bg-gray-50 p-8 rounded-lg shadow-md" style="font-family: 'Poppins', sans-serif;">
+          <p><strong>Northland ALX</strong> is at the forefront of Africa’s digital revolution, delivering innovative solutions that bridge the gap between technology and real-world needs. Our portfolio spans gold traceability, agricultural compliance, digital finance, logistics, and education. </p>
+          <p class="mt-4">From <span style="color:#bfa046;">GoldBod Systems</span>—ensuring every gram of gold is tracked and monetized securely—to <span style="color:#bfa046;">CTAP</span>, Ghana’s unified student admissions platform, we build infrastructure that empowers people and organizations. Our <span style="color:#bfa046;">IoT Compliance Modules</span> and <span style="color:#bfa046;">Agri/Cocoa Traceability</span> platforms guarantee transparency and compliance in critical sectors. </p>
+          <p class="mt-4">We believe in a connected Africa, where technology is accessible, secure, and transformative. Our team combines deep technical expertise with a passion for impact, making Northland ALX the partner of choice for governments, enterprises, and communities across the continent.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="py-16">
+      <div class="max-w-5xl mx-auto px-4 text-center">
+        <h3 class="text-3xl font-bold mb-8" style="color:#bfa046;">Meet Our Team</h3>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-white p-6 rounded-lg shadow flex flex-col items-center">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Kwame Mensah" class="team-photo">
+            <h4 class="text-xl font-semibold mb-1">Kwame Mensah</h4>
+            <p class="text-sm mb-2" style="color:#bfa046;">CEO & Co-Founder</p>
+            <p class="text-sm">Visionary leader with 10+ years in African tech and logistics.</p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow flex flex-col items-center">
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Akosua Boateng" class="team-photo">
+            <h4 class="text-xl font-semibold mb-1">Akosua Boateng</h4>
+            <p class="text-sm mb-2" style="color:#bfa046;">CTO & Co-Founder</p>
+            <p class="text-sm">Tech architect passionate about compliance, IoT, and digital finance.</p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow flex flex-col items-center">
+            <img src="https://randomuser.me/api/portraits/men/85.jpg" alt="Yaw Owusu" class="team-photo">
+            <h4 class="text-xl font-semibold mb-1">Yaw Owusu</h4>
+            <p class="text-sm mb-2" style="color:#bfa046;">Head of Operations</p>
+            <p class="text-sm">Expert in scaling SaaS and building partnerships across Africa.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Investor Call to Action -->
+    <section id="investor" class="py-16">
+      <div class="max-w-3xl mx-auto px-4 text-center bg-white rounded-lg shadow-lg p-10">
+        <h3 class="text-3xl font-bold mb-4" style="color:#bfa046;">Invest in Africa’s Digital Future</h3>
+        <p class="mb-6 text-lg">Join us as we scale transformative solutions across Africa. Northland ALX is open to strategic investors who share our vision for a connected, compliant, and prosperous continent. </p>
+        <a href="#contact" class="button-primary py-3 px-8 rounded text-lg">Contact Our Team</a>
+      </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section id="newsletter" class="py-12 bg-white">
+      <div class="max-w-3xl mx-auto px-4 text-center">
+        <h3 class="text-2xl font-bold mb-4" style="color:#bfa046;">Stay Updated</h3>
+        <p class="mb-6">Get the latest on Africa’s digital transformation. Sign up for our newsletter:</p>
+        <form class="flex flex-col md:flex-row justify-center items-center gap-4">
+          <input type="email" class="newsletter-input" placeholder="Your email address" required>
+          <button type="submit" class="button-primary py-3 px-8 rounded text-lg">Subscribe</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Contact Section (Redesigned Form) -->
+    <section id="contact" class="py-16">
+      <div class="max-w-6xl mx-auto px-4 text-center">
+        <h3 class="text-3xl font-bold mb-8">Contact Us</h3>
+        <form action="#" method="POST" class="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-lg" style="font-family: 'Poppins', sans-serif;">
+          <div class="mb-6 text-left">
+            <label for="name" class="block text-sm font-semibold mb-2">Name</label>
+            <input type="text" id="name" name="name" class="w-full border border-gray-300 rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition" placeholder="Your Name">
+          </div>
+          <div class="mb-6 text-left">
+            <label for="email" class="block text-sm font-semibold mb-2">Email</label>
+            <input type="email" id="email" name="email" class="w-full border border-gray-300 rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition" placeholder="you@email.com">
+          </div>
+          <div class="mb-6 text-left">
+            <label for="message" class="block text-sm font-semibold mb-2">Message</label>
+            <textarea id="message" name="message" rows="4" class="w-full border border-gray-300 rounded-lg py-3 px-4 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition" placeholder="How can we help you?"></textarea>
+          </div>
+          <button type="submit" class="button-primary py-3 px-8 rounded text-lg w-full">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 bg-white">
+      <div class="max-w-6xl mx-auto px-4 text-center">
+        <p>&copy; 2025 Northland ALX. All rights reserved.</p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/233501234567" class="whatsapp-float" target="_blank" title="Chat with us on WhatsApp" aria-label="Chat with us on WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 24 24"><path d="M12.004 2.003c-5.522 0-9.997 4.475-9.997 9.997 0 1.762.468 3.484 1.354 4.997l-1.432 5.238 5.377-1.413c1.478.805 3.153 1.23 4.698 1.23 5.522 0 9.997-4.475 9.997-9.997s-4.475-9.997-9.997-9.997zm0 18.181c-1.401 0-2.779-.362-3.985-1.048l-.285-.166-3.192.839.85-3.104-.185-.32c-.822-1.426-1.257-3.054-1.257-4.682 0-4.411 3.587-7.998 7.998-7.998s7.998 3.587 7.998 7.998-3.587 7.998-7.998 7.998zm4.425-5.808c-.242-.121-1.434-.707-1.655-.788-.222-.081-.384-.121-.546.121-.161.242-.626.788-.768.95-.141.161-.283.181-.525.06-.242-.121-1.022-.377-1.947-1.201-.72-.642-1.207-1.433-1.35-1.675-.141-.242-.015-.373.106-.494.109-.108.242-.282.363-.423.121-.141.161-.242.242-.404.081-.161.04-.303-.02-.424-.06-.121-.546-1.318-.748-1.803-.197-.474-.398-.409-.546-.416-.141-.006-.303-.007-.464-.007s-.424.06-.646.303c-.222.242-.848.828-.848 2.018 0 1.19.868 2.341.988 2.504.121.161 1.707 2.609 4.141 3.557.579.199 1.03.317 1.382.406.581.148 1.11.127 1.528.077.466-.056 1.434-.586 1.637-1.152.202-.566.202-1.051.142-1.152-.06-.101-.22-.161-.462-.282z"/></svg>
+  </a>
 
 </body>
 </html>
