@@ -2,39 +2,39 @@
 
 ![Northland ALX Logo](https://placeholder.com/logo.png) <!-- Add your logo URL here -->
 
-Welcome to the official **Northland ALX** brand kit. This repo contains our brand identity, digital strategy, and a clear roadmap of our product vision.
+Welcome to the official Northland ALX brand kit. This repo contains our brand identity, digital strategy, and a clear roadmap of our product vision.
 
 ---
 
 🏢 Company Identity
 
-- **Legal Name:** Northland Analytics & Logistics LLC  
-- **Brand Name:** Northland ALX  
-- **Tagline:** Smart. Connected. Reliable.  
-- **Headquarters:** Accra, Ghana 🇬🇭  
-- **Scope:** Pan‑African IT consultancy and SaaS company  
-- **Mission:** To power Africa’s digital transformation through secure, scalable IT solutions in logistics, education, government, finance, and compliance.
+- Legal Name: Northland Analytics & Logistics LLC  
+- Brand Name: Northland ALX  
+- Tagline: Smart. Connected. Reliable.  
+- Headquarters: Accra, Ghana 🇬🇭  
+- Scope: Pan‑African IT consultancy and SaaS company  
+- Mission: To power Africa’s digital transformation through secure, scalable IT solutions in logistics, education, government, finance, and compliance.
 
 ---
 
 🛠 What We Build & Do
 
-1. **Gold Compliance IoT System**  
+1. Gold Compliance IoT System  
    Real-time IoT monitoring, blockchain logging, and smart audit tools for gold sourcing and export.
 
-2. **Agriculture & Cocoa Compliance Platform**  
+2. Agriculture & Cocoa Compliance Platform  
    Track produce—humidity, origin, quality—with IoT+ traceability dashboards.
 
-3. **Centralized Tertiary School Application Portal**  
+3. Centralized Tertiary School Application Portal  
    Auto-match applicants to schools with vacancy—even if students didn't apply—ensuring fair national placement.
 
-4. **Warehouse Marketplace ("Amazon of Warehouses")**  
+4. Warehouse Marketplace ("Amazon of Warehouses")  
    Centralized booking, capacity forecasting, and dynamic pricing for bonded & free-zone storage.
 
-5. **Peer-to-Peer Email Transfer Protocol**  
+5. Peer-to-Peer Email Transfer Protocol  
    Secure, decentralized email-to-email money transfers—bank-agnostic, global-grade.
 
-6. **Local Data Centers & On-Prem ML**  
+6. Local Data Centers & On-Prem ML  
    Managed African data centers running ML systems for compliance, school placement, warehouse optimization, and IoT anomaly detection.
 
 ---
@@ -43,8 +43,8 @@ Welcome to the official **Northland ALX** brand kit. This repo contains our bran
 
 | Field        | Value                                                                 |
 |--------------|-----------------------------------------------------------------------|
-| Handle       | @NorthlandALX                                                    |
-| Display Name | Northland ALX                                                        |
+| Handle       | @NorthlandALX                                                         |
+| Display Name | Northland ALX                                                         |
 | Bio          | Africa’s trusted tech firm. We build reliable IT systems for logistics, compliance, education, and finance. Creators of GoldBod™, SmartSchools™, ZeroCap™, WarehouseX™, a[...] |
 | Location     | Accra, Ghana • Global 🌍                                              |
 | Website      | [northlandalx.com](https://northlandalx.com) *(placeholder or GitHub Pages)* |
@@ -67,8 +67,8 @@ Made in Ghana • Built for Africa • Scaling globally 🌍
 
 🌐 Visit Us Online
 
-- **Website:** [northlandalx.com](https://northlandalx.com) *(or GitHub Pages link once published)*  
-- **Twitter:** [@NorthlandALX](https://twitter.com/NorthlandALX)  
+- Website: [northlandalx.com](https://northlandalx.com)  
+- Twitter: [@NorthlandALX](https://twitter.com/NorthlandALX)  
 
 
 📄 License
